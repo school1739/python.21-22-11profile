@@ -1,11 +1,13 @@
-
-if n == 1:
-    cnt_lol = 2
-    for j in range(1, int(i)+1):
-        cnt_lol += switches[j]
-    cnt += cnt_lol
-else:
-    cnt_lol = 0
-    for j in range(1, int(i)+1):
-        cnt_lol += switches[j]
-    cnt += cnt_lol*n
+cnt = 0
+for i in input()[-1:]:
+    if n == 1:
+        cnt_lol = 2
+        for j in range(0, int(i)+1):
+            cnt_lol += switches[str(j)+str(j+1)]
+        cnt += cnt_lol
+    else:
+        cnt_lol = 0
+        for j in range(0, int(i)+1):
+            cnt_lol += switches[j] + switches['full']
+        cnt += cnt_lol
+print(cnt)
