@@ -23,6 +23,6 @@ A = []
 # ((x ∈ P) → (x ∈ A)) ∨ (¬(x ∈ A) → ¬(x ∈ Q))
 x = 0
 for x in range(1000):
-    if not ((not (x in P) or (x in A)) or ((x in A) or not (x in Q))):
+    if not ((not (x in P) or (x in A)) or ((x in A) or not (x in Q))): #if not(((x in P) <= (x in A)) or ((x not in A) <=  (x not in Q))):
         A.append(x)
 print(A)
