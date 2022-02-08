@@ -24,10 +24,9 @@ with open(
     for i in timeUpdateProc:
         c += i
         if c > maxSyncronWorkingProc:
-            maxSync = c
+            maxSyncronWorkingProc = c
             cSec = 0
         if c == maxSyncronWorkingProc:
             cSec += 1
-            cSec = 0
 
     print(maxSyncronWorkingProc, cSec)
