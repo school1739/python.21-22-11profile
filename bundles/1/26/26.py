@@ -1,6 +1,4 @@
-with open(
-    "/home/sv-cheats-1/Documents/PROJECTS/python.21-22-11profile/bundles/1/26/26.txt"
-) as F:
+with open("26.txt") as F:
     f = F.readlines()
     f.pop(0)
     f = list(map(lambda i: list(map(int, i.split(" "))), f))
