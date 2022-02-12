@@ -1,7 +1,13 @@
-def win1(n):
-    if n + 1 >= 147 or n * 5 - 1 >= 147:
-        return True
-    return False
+def win1(s):
+    return s + 1 >= 147 or s * 5 - 1 >= 147
+
+
+def loss1(s):
+    return not win1(s) and win1(s + 1) and win1(s * 5 - 1)
+
+
+def win2(s):
+    return loss1(s + 1) or loss1(s * 5 - 1)
 
 
 for s in range(1, 147):
@@ -9,20 +15,13 @@ for s in range(1, 147):
         print('19:', s)
         break
 
-
-def loss1(n):
-    if not win1(n) and win1(n + 1) and win1(n * 5 + 1):
-        return True
-    return False
-
-
-nums = set()
+answ_20 = []
+answ_21 = []
 for s in range(1, 147):
-    if loss1(s + 1) or loss1(s * 5 - 1):
-        nums.add(s)
+    if win2(s):
+        answ_20.append(s)
+    if (win1(s + 1) and win2(s * 5 - 1)) or (win1(s * 5 - 1) and win2(s + 1)):
+        answ_21.append(s)
 
-print('20: ', min(nums), max(nums), sep='')
-
-
-def win12(n):
-    if
+print('20: ', min(answ_20), max(answ_20), sep='')
+print('21:', min(answ_21))
