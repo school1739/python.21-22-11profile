@@ -1,22 +1,23 @@
-sum_final = 0
-min_diff = 10000000000
-with open('3B.txt') as F:
-    f = F.readlines()
-    f.pop(0)
+def analyzer(path):
+    with open(path) as F:
+        f = F.readlines()
+        f.pop(0)
+        nums = list(map(lambda s: list(map(int, s.split(' '))), f))
 
-    for i in f:
-        a, b = map(int, i.split(' '))
-        diff = abs(a - b)
-        if diff % 16 != 0:
-            min_diff = min(min_diff, diff)
-        sum_final += max(a, b)
+        sumFin = 0
+        minDiff = 1000000000
+        for i in nums:
+            x, y = i
+            sumFin += max(i)
+            currentDiff = abs(x - y)
+            if currentDiff != 0 and currentDiff % 16 != 12:
+                minDiff = min(currentDiff, minDiff)
 
-if sum_final % 16 != 12:
-    print(sum_final)
-else:
-    print(sum_final - min_diff)
+        if sumFin % 16 == 12:
+            sumFin -= minDiff
 
-# print(sum_final)
-# print(sum_final % 16)
+        return sumFin
 
+
+print(analyzer('3A.txt'), analyzer('3B.txt'))
 # Ответ: 64390 6664683

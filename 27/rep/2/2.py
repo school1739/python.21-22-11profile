@@ -1,18 +1,22 @@
-summ_final = 0
-min_diff = 100000
 with open('2B.txt') as F:
     f = F.readlines()
     f.pop(0)
-    for i in f:
-        a, b = map(int, i.split(' '))
-        diff = abs(a-b)
-        if diff % 100 != 0:
-            min_diff = min(diff, min_diff)
-        summ_final += min(a, b)
+    nums = list(map(lambda s: list(map(int, s.split(' '))), f))
 
-if summ_final % 100 == 0:
-    print(summ_final + min_diff)
-else:
-    print(summ_final)
+    sumFin = 0
+    minDiff = 1000000000
+    for i in nums:
+        x, y = i
+        sumFin += min(i)
+
+        currentDiff = abs(x - y)
+        if currentDiff != 0 and currentDiff % 100 != 0:
+            minDiff = min(currentDiff, minDiff)
+
+    if sumFin % 100 == 0:
+        sumFin += minDiff
+
+    print(sumFin)
+    print(sumFin % 100)
 
 # Ответ: 34601 3318701
