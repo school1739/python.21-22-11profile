@@ -1,4 +1,4 @@
-"""digits = {
+'''"""digits = {
     "d0": (1, 1, 1, 1, 1, 1, 0),
     "d1": (0, 1, 1, 0, 0, 0, 0),
     "d2": (1, 1, 0, 1, 1, 0, 1),
@@ -40,3 +40,33 @@ for i in input()[-1:]:
         cnt += cnt_lol
     n += 1
 print(cnt)
+'''
+switches = {
+    "1": 4,
+    "2": 9,
+    "3": 11,
+    "4": 14,
+    "5": 17,
+    "6": 18,
+    "7": 23,
+    "8": 27,
+    "9": 28,
+    '0': 0,
+    "full": 30                                            
+}
+present_int = input() #править тут!
+cnt = 0
+for i in range(len(present_int)):
+    mult = '1'*(len(present_int)-i-1)
+    if mult == '':
+        mult = 0
+    else:
+        mult = int(mult)
+    cnt += switches[present_int[i]] + int(present_int[i])*switches['full']*mult
+cnt = cnt-(len(present_int)-1)*2
+print(cnt)
+'''
+допилить чтение и запись в файл
+провести тесты
+залить в 1а
+'''
