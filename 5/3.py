@@ -1,13 +1,13 @@
-# https://inf-ege.sdamgia.ru/problem?id=28542
+# https://inf.reshuege.ru/problem?id=13482
 
-for i in range(1000):
-    res = ''
-    s = i
-    while s > 0:
-        res = str(s % 3) + res
-        s //= 3
+for i in range(1, 10000, 1):
+    x = i
+    if x % 2 == 1:
+        a = str(x % 4)
+        b = str(x % 3)
+        c = str(x % 2)
+        y = a + b + c
+        if int(y) == 301:
+            print(x)
 
-    r = res + str(i % 3)
-    if len(str(int(r, 3))) == 4:
-        print(str(int(r, 3)))
-        break
+#Ответ: 15

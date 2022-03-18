@@ -1,4 +1,4 @@
-with open('B.txt') as F:
+with open('A.txt') as F:
     f = list(map(int, F.readlines()))
     f.pop(0)
 

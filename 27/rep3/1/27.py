@@ -1,12 +1,15 @@
 with open('A.txt') as F:
-    f = list(map(int, F.readlines()))
-    f.pop(0)
+    # f = list(map(int, F.readlines()))
+    # f.pop(0)
+    n = int(F.readline())
     div19Odd = []
     div19Even = []
     odd = []
     even = []
 
-    for x in f:
+    # for x in f:
+    for i in range(n):
+        x = int(F.readline())
         if x % 19 == 0:
             if x % 2 == 0:
                 div19Even.append(x)
@@ -19,6 +22,7 @@ with open('A.txt') as F:
                 odd.append(x)
 
     print(sorted(div19Even)[-2:])
+    # print(max(div19Even))
     print(max(div19Odd))
     print(max(even))
     print(max(odd))

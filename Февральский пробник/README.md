@@ -1,0 +1,1 @@
+### [Ссылка на вариант](https://kompege.ru/variant?kim=25008180)
