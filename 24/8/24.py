@@ -23,3 +23,4 @@ with open('/home/sv-cheats-1/Documents/PROJECTS/python-school/24/8/24.txt') as F
             m[l] += 1
 
     print(m)
+# Ответ: E398
