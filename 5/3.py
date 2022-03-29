@@ -1,4 +1,4 @@
-#https://inf.reshuege.ru/problem?id=13482
+# https://inf.reshuege.ru/problem?id=13482
 
 for i in range(1, 10000, 1):
     x = i
