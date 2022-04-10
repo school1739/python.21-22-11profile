@@ -1,7 +1,7 @@
 # https://inf-ege.sdamgia.ru/problem?id=33528
 
 with open('26.txt') as F:
-    # with open('/home/sv-cheats-1/Documents/PROJECTS/python.21-22-11profile/26/4/test') as F:
+
     n, m = map(int, F.readline().split(' '))
     f = list(map(lambda l: l.strip(), F.readlines()))
     aMatrix = []
