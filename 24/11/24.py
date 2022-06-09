@@ -1,3 +1,4 @@
+# https://inf-ege.sdamgia.ru/problem?id=45258
 with open(r'24.txt') as F:
     f = F.readline()
     f = f.replace('CB', 'AB')
